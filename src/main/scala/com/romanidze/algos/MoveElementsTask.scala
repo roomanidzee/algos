@@ -16,15 +16,11 @@ object MoveElementsTask extends App {
 
   val tempVar: Int = inputList.head
 
-  for (i <- 0 to limit - 2) {
-
+  for (i <- 0 until limit - 1) {
     inputList(i) = inputList(i + 1)
-
-    if (i == limit - 2) {
-      inputList(i - 1) = tempVar
-    }
-
   }
+
+  inputList(limit - 1) = tempVar
 
   println(s"Изменённый массив: $inputList")
 
