@@ -3,7 +3,7 @@ package com.romanidze.algos
 import java.util.Scanner
 import scala.collection.mutable.ListBuffer
 
-object StirlingTask extends App{
+object StirlingTask extends App {
 
   def peopleSeparator(people: Int, commands: Int): Int = {
 
@@ -12,8 +12,11 @@ object StirlingTask extends App{
     var tempArray = List.fill(limit + 1)(1).to[ListBuffer]
 
     (2 to commands)
-      .foreach(i => (1 to limit)
-        .foreach(j => tempArray(j) += i * tempArray(j - 1)))
+      .foreach(
+        i =>
+          (1 to limit)
+            .foreach(j => tempArray(j) += i * tempArray(j - 1))
+      )
 
     tempArray(limit)
 

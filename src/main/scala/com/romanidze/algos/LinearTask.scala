@@ -9,12 +9,12 @@ object LinearTask extends App {
 
   def merge(left: List[Int], right: List[Int]): List[Int] =
     (left, right) match {
-      case(left, Nil) => left
-      case(Nil, right) => right
-      case(leftHead :: leftTail, rightHead :: rightTail) =>{
-        if (leftHead < rightHead){
-          leftHead::merge(leftTail, right)
-        } else{
+      case (left, Nil)  => left
+      case (Nil, right) => right
+      case (leftHead :: leftTail, rightHead :: rightTail) => {
+        if (leftHead < rightHead) {
+          leftHead :: merge(leftTail, right)
+        } else {
           rightHead :: merge(left, rightTail)
         }
       }
@@ -23,17 +23,17 @@ object LinearTask extends App {
 
   def mergeSort(list: List[Int]): List[Int] = {
     val n = list.length / 2
-    if (n == 0){
+    if (n == 0) {
       list
-    }else {
+    } else {
       val (left, right) = list.splitAt(n)
       merge(mergeSort(left), mergeSort(right))
     }
   }
 
   var inputList = new mutable.ListBuffer[Int]()
-  val scanner = new Scanner(System.in)
-  val rnd = new Random()
+  val scanner   = new Scanner(System.in)
+  val rnd       = new Random()
 
   print("Введите первое число: ")
   val start = scanner.nextInt()
@@ -57,10 +57,12 @@ object LinearTask extends App {
   var counter = 0
 
   (0 until end - 1)
-    .foreach(i =>
-      if (i < inputList(i) && counter < 2) {
-      counter += 1
-      println(s"Элемент: $i")
-    })
+    .foreach(
+      i =>
+        if (i < inputList(i) && counter < 2) {
+          counter += 1
+          println(s"Элемент: $i")
+        }
+    )
 
 }
