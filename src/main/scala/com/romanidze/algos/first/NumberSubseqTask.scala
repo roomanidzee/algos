@@ -2,20 +2,20 @@ package com.romanidze.algos.first
 
 import scala.collection.mutable.ListBuffer
 
-object NumberSubseqTask extends App{
+object NumberSubseqTask extends App {
 
   val testList = List(3, 29, 5, 5, 28, 6)
 
   println(s"Оригинальный массив: $testList")
   println(" ")
 
-  var tempList =  List.fill(testList.length)(0).to[ListBuffer]
+  var tempList = List.fill(testList.length)(0).to[ListBuffer]
 
-  for(i <- testList.indices){
+  for (i <- testList.indices) {
 
-    for(j <- 0 until i){
+    for (j <- 0 until i) {
 
-      if(testList(i) > testList(j) && tempList(j) > tempList(i)){
+      if (testList(i) > testList(j) && tempList(j) > tempList(i)) {
 
         tempList(i) = tempList(j)
 
@@ -27,20 +27,19 @@ object NumberSubseqTask extends App{
 
   }
 
-
-  val last = tempList.max
+  val last  = tempList.max
   var index = tempList.indexOf(last)
 
-  var j = 0
+  var j                       = 0
   var result: ListBuffer[Int] = ListBuffer(testList(index))
 
-  while(tempList(index) != -1 && index > 0){
+  while (tempList(index) != -1 && index > 0) {
 
-     j = index - 1
+    j = index - 1
 
-     while((tempList(j) != tempList(index) - 1 || testList(j) >= testList(index)) && (j > 0)){
-       j -= 1
-     }
+    while ((tempList(j) != tempList(index) - 1 || testList(j) >= testList(index)) && (j > 0)) {
+      j -= 1
+    }
 
     index = j
     result += testList(index)
@@ -49,7 +48,7 @@ object NumberSubseqTask extends App{
 
   var finalResult = result.reverse
 
-  if(finalResult(0) > finalResult(1)){
+  if (finalResult(0) > finalResult(1)) {
     finalResult.remove(0)
   }
 
