@@ -1,7 +1,7 @@
-package com.romanidze.algos
+package com.romanidze.algos.first
 
-import scala.util.Random
 import scala.collection.mutable
+import scala.util.Random
 
 object OddTask extends App {
 

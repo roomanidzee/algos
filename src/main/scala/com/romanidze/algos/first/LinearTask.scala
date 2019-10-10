@@ -1,9 +1,9 @@
-package com.romanidze.algos
+package com.romanidze.algos.first
 
 import java.util.Scanner
 
-import scala.util.Random
 import scala.collection.mutable
+import scala.util.Random
 
 object LinearTask extends App {
 

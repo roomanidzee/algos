@@ -1,4 +1,4 @@
-package com.romanidze.algos
+package com.romanidze.algos.first
 
 import java.util.Scanner
 

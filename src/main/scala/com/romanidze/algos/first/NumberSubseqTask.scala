@@ -1,4 +1,4 @@
-package com.romanidze.algos
+package com.romanidze.algos.first
 
 import scala.collection.mutable.ListBuffer
 

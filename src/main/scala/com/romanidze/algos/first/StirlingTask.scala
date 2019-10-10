@@ -1,6 +1,7 @@
-package com.romanidze.algos
+package com.romanidze.algos.first
 
 import java.util.Scanner
+
 import scala.collection.mutable.ListBuffer
 
 object StirlingTask extends App {
