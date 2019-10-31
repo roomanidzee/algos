@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.FileReader;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * 25.10.2019
@@ -103,6 +104,14 @@ public class CityTask{
         }
 
         List<String> result = findLongestChain(cities);
-        System.out.println("Итоговая цепочка: " + result);
+
+        System.out.print("Итоговая цепочка: " + result.get(0) + " -> ");
+
+        IntStream.range(1, result.size() - 1)
+                 .mapToObj(i -> result.get(i) + " -> ")
+                 .forEachOrdered(System.out::print);
+
+        System.out.print(result.get(result.size() - 1));
+
     }
 }

@@ -1,6 +1,7 @@
 Kazan
+Arghangelsk
+Karaganda
+Krasnoyarsk
 Novgorod
 Dmitrov
-Astana
-Moscow
 Vologda
