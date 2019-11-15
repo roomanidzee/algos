@@ -1,7 +1,4 @@
-package com.romanidze.algos.sixth;
-
-import com.romanidze.algos.sixth.kruskal.Edge;
-import com.romanidze.algos.sixth.kruskal.Graph;
+package com.romanidze.algos.sixth.kruskal;
 
 import java.util.List;
 /**
